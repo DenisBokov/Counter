@@ -13,13 +13,22 @@ final class ViewController: UIViewController {
     
     @IBOutlet weak var historyChangesTextView: UITextView!
     
+    @IBOutlet weak var plusButton: UIButton!
+    
+    @IBOutlet weak var minusButton: UIButton!
+    
+    @IBOutlet weak var clearButton: UIButton!
+    
     private var counter: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         historyChangesTextView.isEditable = false
+        historyChangesTextView.layer.cornerRadius = 10
         historyChangesTextView.text = "История изменений:\n"
+        
+        changeAppearanceButtons(plusButton, minusButton, clearButton)
 
     }
     
@@ -44,6 +53,10 @@ final class ViewController: UIViewController {
         let date = Date().formatToString(for: .dateFormatter)
         counter = 0
         updateTextViewAndLabel(for: "\(date): значение сброшено\n", and: "\(counter)")
+    }
+    
+    private func changeAppearanceButtons(_ buttons: UIButton...) {
+        buttons.forEach { $0.layer.cornerRadius = 10 }
     }
     
     private func updateTextViewAndLabel(for text: String, and labelText: String) {
