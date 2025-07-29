@@ -16,24 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttm-nt-AEi">
-                                <rect key="frame" x="16" y="646" width="162" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.01666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="+"/>
-                                <connections>
-                                    <action selector="increaseCounter" destination="BYZ-38-t0r" eventType="touchUpInside" id="T6S-X8-T65"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b15-vX-mSb">
                                 <rect key="frame" x="215" y="646" width="162" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                <buttonConfiguration key="configuration" style="plain" title="-">
+                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="51"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="reduceCounter" destination="BYZ-38-t0r" eventType="touchUpInside" id="5sd-S4-rvu"/>
                                 </connections>
@@ -63,18 +54,34 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttm-nt-AEi">
+                                <rect key="frame" x="16" y="646" width="162" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.01666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+">
+                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="51"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="increaseCounter" destination="BYZ-38-t0r" eventType="touchUpInside" id="T6S-X8-T65"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
                     <connections>
+                        <outlet property="clearButton" destination="jnH-yL-28H" id="Yaw-mt-mKn"/>
                         <outlet property="countLabel" destination="Kqd-8C-o8M" id="vts-Yo-v5K"/>
                         <outlet property="historyChangesTextView" destination="7ug-fk-O5Z" id="lYF-Bq-H6P"/>
+                        <outlet property="minusButton" destination="b15-vX-mSb" id="mLC-Yu-jIe"/>
+                        <outlet property="plusButton" destination="ttm-nt-AEi" id="cgJ-l8-70w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="845" y="-64"/>
+            <point key="canvasLocation" x="753" y="-58"/>
         </scene>
     </scenes>
     <resources>
